@@ -48,7 +48,7 @@ class ItemsController extends Controller
         return response()->json([
             'success' => true,
             'data' => $item
-        ], Response::HTTP_OK);
+        ], Response::HTTP_OK); 
     }
 
     public function destroy(Item $item) {

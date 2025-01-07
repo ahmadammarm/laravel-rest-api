@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function() {
     Route::apiResource('items', ItemsController::class);
+});
+
+Route::prefix('v1')->group(function() {
+    Route::apiResource('products', ProductController::class); 
 });
